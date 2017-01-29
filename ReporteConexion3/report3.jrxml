@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report3" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4ac7a04b-7774-464c-8ae2-5c4a5dd85e62">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="50"/>
+	<property name="ireport.y" value="39"/>
+	<parameter name="titulo" class="java.lang.String"/>
+	<parameter name="autor" class="java.lang.String"/>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="username" class="java.lang.String"/>
+	<field name="password" class="java.lang.String"/>
+	<field name="comentarios" class="java.lang.String"/>
+	<field name="puntos" class="java.lang.Integer"/>
+	<variable name="sumaPuntos" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{puntos}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="572" height="79" uuid="065e9c45-771b-4a61-a6ff-dad2b3d989e5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{titulo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="472" y="0" width="100" height="35" uuid="e0a921fa-b221-45b1-aa95-f88fe7675e1a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Autor: " + $P{autor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="15" width="59" height="20" uuid="51e0bd67-2182-4b6e-98cd-6ca8f81604b8"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="15" width="77" height="20" uuid="291c356d-2853-49f1-a741-eef32f53cd9c"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="15" width="83" height="20" uuid="1ddb8280-0561-4c8c-a033-d94879aef00a"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Usuario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="15" width="100" height="20" uuid="562109c2-58ca-417f-88f6-f884a8c3916a"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contraseña]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="485" y="15" width="87" height="20" uuid="0a7cb1d4-dc31-4dff-acee-78ec4b160ade"/>
+				<textElement textAlignment="Center">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comentarios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="399" y="15" width="73" height="20" uuid="df13cef0-ecbd-404b-8498-fe790a17f56d"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Puntos]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="12" width="59" height="20" uuid="49140ad0-9ba2-4e1b-b63d-f04f23b9be0a"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="15" width="77" height="20" uuid="23061f81-ae27-4a38-a920-ce9840b1aacd"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="178" y="12" width="83" height="20" uuid="87da40da-89f3-4765-81d6-82611abb0944"/>
+				<textFieldExpression><![CDATA[$F{username}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="285" y="12" width="100" height="20" uuid="9884cc61-b752-40b3-b393-829caba8ff0c"/>
+				<textFieldExpression><![CDATA[$F{password}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="485" y="12" width="87" height="20" uuid="a2f8dcb5-4c32-4ee2-b3da-2e6737247053"/>
+				<textFieldExpression><![CDATA[$F{comentarios}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="399" y="12" width="73" height="20" uuid="96ce0057-ff1f-4d1d-a343-07e22bcf5405"/>
+				<textFieldExpression><![CDATA[$F{puntos}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="472" y="34" width="100" height="20" uuid="93298bd9-884f-4a77-a327-44cc1f6b8157"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="358" y="34" width="114" height="20" uuid="47f61eda-a519-4e31-8dc9-531ea01ba683"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Número de página: ]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="399" y="22" width="86" height="20" uuid="df95ac7a-9f39-4676-b17f-e71eedd0f0e7"/>
+				<textFieldExpression><![CDATA[$V{sumaPuntos}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="285" y="22" width="113" height="20" uuid="6d0e865a-5dd1-4d9a-bacc-c41456b78ebc"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Suma de Puntos:]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
